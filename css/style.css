@@ -1,0 +1,57 @@
+body {
+  /*width: 98%;*/
+  /*height: 98%;*/
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+h1 {
+  margin: 2px auto;
+}
+
+#main-box  {
+  border: 1px solid black;
+  width: 307px;
+  margin: 5px auto;
+}
+
+#row-box0, #row-box1, #row-box2  {
+  padding: 0;
+  margin: 0;
+}
+
+.buttons-class {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  outline: none; /* hides the "halo" that otherwise appears when you click the button */
+}
+
+#yellowWins-box, #blueWins-box, #turn-box, #playAgain-box, #draw-box, #race-box {
+  width: 300px;
+  margin: auto;
+  border: 1px solid black;
+  margin: 2px auto;
+}
+
+#playAgain-box {
+  height: 60px;
+  background-color: red;
+}
+
+select {
+  margin: 0;
+  padding: 0;
+  /*border: 0;*/
+}
+
+
+
+
+
