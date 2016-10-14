@@ -28,7 +28,7 @@ function defaults() {
 }
 
 defaults();
-
+//create buttons
 k = 0;
 for (i = 0; i < ROW_COUNT; i++) {
     $("#buttons-box").append( $("<div>").attr("id", "row-box" + i) );
@@ -73,7 +73,8 @@ $("#playAgain-box").click("click", function() {
     
 });
 
-$("#buttons-box").mousemove(function(){
+//$("#buttons-box").mousemove(function(){
+function displayAlert() {
     check();       
     if (raceCheck()) { 
         var winner = xWins > yWins ? "Yellow" : "Blue";
@@ -86,8 +87,8 @@ $("#buttons-box").mousemove(function(){
         $("#draw-box").html('<h3>Draw: ' + xyDraw + '</h3>'); 
         reset();
     }
-    
-});
+    console.log("display alert");
+}
 
 $(".buttons-class").click(function(event) {
         var bt = event.target;
@@ -108,9 +109,21 @@ $(".buttons-class").click(function(event) {
 
         $(bt).prop("disabled", true);
         draw++;
+
+        //myTimer();
+        //myStopFunction();
+        window.setTimeout(displayAlert, 100);
+        
 });
 
-//setInterval(function(){blink()}, 2000);
+// function myTimer() {
+//     myVar = setInterval(displayAlert, 1000);
+//     console.log("Timer ticked");
+// }
+// function myStopFunction() {
+//     clearInterval(myVar);
+// }
+
 function blink() {
     $("#main-box").fadeTo(200, 0.1).fadeTo(200, 1.0);
 }
