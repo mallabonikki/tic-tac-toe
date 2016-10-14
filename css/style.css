@@ -46,13 +46,22 @@ h1 {
   background-color: red;
 }
 
-select {
+/*select {
   margin: 0;
   padding: 0;
-  /*border: 0;*/
-  /*float: right;*/
   text-align: center;
-}
+}*/
+
+/*#race-box {
+  text-align: left;
+}*/
+
+/*checkbox {
+  width: 15px;
+  height: 15px;
+  border: 2px solid black;
+}*/
+
 
 
 

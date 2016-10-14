@@ -24,6 +24,8 @@ function defaults() {
         $('<option>', {value: val, text: myOptions[text]}).append(s);
     });
     $('#race-box').append(s);
+    // $("#race-box").append( $("<checkbox>").attr("id", "check-box") );
+    // $('#check-box').prop('checked', true);
     $("#info-box").append( $("<button>").attr("id", "playAgain-box").html("<h3>Play Again</html>") );
 }
 
@@ -116,13 +118,13 @@ $(".buttons-class").click(function(event) {
         
 });
 
-// function myTimer() {
-//     myVar = setInterval(displayAlert, 1000);
-//     console.log("Timer ticked");
-// }
-// function myStopFunction() {
-//     clearInterval(myVar);
-// }
+function myTimer() {
+    myVar = setInterval(displayAlert, 1000);
+    console.log("Timer ticked");
+}
+function myStopTimer() {
+    clearInterval(myVar);
+}
 
 function blink() {
     $("#main-box").fadeTo(200, 0.1).fadeTo(200, 1.0);
@@ -132,11 +134,11 @@ function reset() {
     for (i = 0; i < (ROW_COUNT * COLUMN_COUNT); i++) {
         myArray[i] = "";
     }
-    flag = 0;
+    //flag = 0;
     draw = 0;
     $(".buttons-class").prop("disabled", false);
     $(".buttons-class").css("background-color", "red");
-    $("#turn-box").html("<h3>Turn: Yellow</h3>").css("background-color", "yellow");
+    //$("#turn-box").html("<h3>Turn: Yellow</h3>").css("background-color", "yellow");
 }
 
 var scoreX = 0;
