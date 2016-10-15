@@ -30,7 +30,7 @@ h1 {
 .buttons-class {
   width: 100px;
   height: 100px;
-  background-color: red;
+  background-color: white;
   outline: none; /* hides the "halo" that otherwise appears when you click the button */
 }
 

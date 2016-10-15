@@ -3,17 +3,22 @@ console.log("Tic Tac Toe");
 var myArray = [];
 var ROW_COUNT = 3;
 var COLUMN_COUNT = 3;
+var imageX = "./images/x.png";
+var imageY = "./images/y.png";
+
 
 //Defaults
 function defaults() {
     $(document.body).prepend( $("<div>").attr("id", "main-box").html('<h1>Tic Tac Toe v1</h1>') );
     $("#main-box").append( $("<div>").attr("id", "buttons-box") );
     $("#main-box").append( $("<div>").attr("id", "info-box").addClass("info-class") );
-    $("#info-box").append( $("<div>").attr("id", "yellowWins-box").html("<h3>Yellow Wins: 0</h3>") );
+    $("#info-box").append( $("<div>").attr("id", "yellowWins-box").html("<h3>X Wins: 0</h3>") );
     $("#info-box").append( $("<div>").attr("id", "draw-box").html("<h3>Draw: 0</h3>") );
-    $("#info-box").append( $("<div>").attr("id", "blueWins-box").html("<h3>Blue Wins: 0</h3>") );
+    $("#info-box").append( $("<div>").attr("id", "blueWins-box").html("<h3>O Wins: 0</h3>") );
     $("#info-box").append( $("<div>").attr("id", "turn-box").html("<h3>Turn: Yellow</h3>") );
-    $("#turn-box").html("<h3>Turn: Yellow</h3>").css("background-color", "yellow");
+    //$("#turn-box").html("<h3>Turn: Yellow</h3>").css("background-color", "yellow");
+    $("#turn-box").html("<h3>Turn</h3>").css( "background-image", "url(" + imageX + ")" ).css("background-size","contain");
+
     $("#info-box").append( $("<div>").attr("id", "race-box").html("<h3>Race: </h3>") );
     //$("#info-box").append( $("<div>").attr("id", "race-box2"));
     // $("#info-box").append( $("<div>").attr("id", "race-box").html("<h3>Race: </h3>") );
@@ -79,8 +84,8 @@ $("#playAgain-box").click("click", function() {
 function displayAlert() {
     check();       
     if (raceCheck()) { 
-        var winner = xWins > yWins ? "Yellow" : "Blue";
-        if (winner=="Yellow") { $("body").css("background-color", "yellow"); } else { $("body").css("background-color", "blue"); }
+        var winner = xWins > yWins ? "X" : "O";
+        if (winner=="Yellow") { $("body").css("background-image", "url(" + imageX + ")"); } else { $("body").css("background-image", "url(" + imageY + ")"); }
         alert("Congratulations " + winner + "! You're the champion!"); 
         location.reload(); } ;
     if (draw === 9)
@@ -97,16 +102,20 @@ $(".buttons-class").click(function(event) {
         var index = $(".buttons-class").index(bt);
         
         if (flag === 0) {
-            $(bt).css("background-color", 'yellow');
+            //$(bt).css("background-color", 'yellow');
+           $(bt).css( "background-image", "url(" + imageY + ")" ).css("background-size","contain");
             myArray[index] = "X"
             flag = 1;
-            $("#turn-box").html("<h3>Turn: Blue</h3>").css("background-color", "blue");
+            //$("#turn-box").html("<h3>Turn: Blue</h3>").css("background-color", "blue");
+            $("#turn-box").html("<h3>Turn</h3>").css( "background-image", "url(" + imageY + ")" ).css("background-size","contain");
         }
         else {
-            $(bt).css("background-color", 'blue');
+            //$(bt).css("background-color", 'blue');
+            $(bt).css( "background-image", "url(" + imageX + ")" ).css("background-size","contain");
             myArray[index] = "O";
             flag = 0;
-            $("#turn-box").html("<h3>Turn: Yellow</h3>").css("background-color", "yellow");
+            //$("#turn-box").html("<h3>Turn: Yellow</h3>").css("background-color", "yellow");
+            $("#turn-box").html("<h3>Turn</h3>").css( "background-image", "url(" + imageX + ")" ).css("background-size","contain");
         }
 
         $(bt).prop("disabled", true);
@@ -137,8 +146,11 @@ function reset() {
     //flag = 0;
     draw = 0;
     $(".buttons-class").prop("disabled", false);
-    $(".buttons-class").css("background-color", "red");
+    $(".buttons-class").css("background-color", "white");
     //$("#turn-box").html("<h3>Turn: Yellow</h3>").css("background-color", "yellow");
+    //$("#turn-box").html("<h3>Turn: Yellow</h3>").css("background-color", "yellow");
+    $(".buttons-class").css("background-image", "none")
+
 }
 
 var scoreX = 0;
