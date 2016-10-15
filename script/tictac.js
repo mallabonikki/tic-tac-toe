@@ -103,7 +103,7 @@ $(".buttons-class").click(function(event) {
         
         if (flag === 0) {
             //$(bt).css("background-color", 'yellow');
-           $(bt).css( "background-image", "url(" + imageY + ")" ).css("background-size","contain");
+           $(bt).css( "background-image", "url(" + imageX + ")" ).css("background-size","contain");
             myArray[index] = "X"
             flag = 1;
             //$("#turn-box").html("<h3>Turn: Blue</h3>").css("background-color", "blue");
@@ -111,7 +111,7 @@ $(".buttons-class").click(function(event) {
         }
         else {
             //$(bt).css("background-color", 'blue');
-            $(bt).css( "background-image", "url(" + imageX + ")" ).css("background-size","contain");
+            $(bt).css( "background-image", "url(" + imageY + ")" ).css("background-size","contain");
             myArray[index] = "O";
             flag = 0;
             //$("#turn-box").html("<h3>Turn: Yellow</h3>").css("background-color", "yellow");
