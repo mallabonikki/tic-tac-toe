@@ -85,7 +85,7 @@ function displayAlert() {
     check();       
     if (raceCheck()) { 
         var winner = xWins > yWins ? "X" : "O";
-        if (winner=="Yellow") { $("body").css("background-image", "url(" + imageX + ")"); } else { $("body").css("background-image", "url(" + imageY + ")"); }
+        if (winner=="X") { $("body").css("background-image", "url(" + imageX + ")"); } else { $("body").css("background-image", "url(" + imageY + ")"); }
         alert("Congratulations " + winner + "! You're the champion!"); 
         location.reload(); } ;
     if (draw === 9)
