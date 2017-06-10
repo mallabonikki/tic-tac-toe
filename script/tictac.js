@@ -161,14 +161,14 @@ function changeDisplay(arrayValue) {
         xWins++;
         scoreX = xWins;
         console.log("Yellow");
-        $("#yellowWins-box").html("<h3>Yellow Wins: " + scoreX + "<h3>");
+        $("#yellowWins-box").html("<h3>X Wins: " + scoreX + "<h3>");
         //setInterval(function(){blink()}, 2000);
     }
     else {
         yWins++;
         scoreY = yWins;
         console.log("Blue");
-        $("#blueWins-box").html("<h3>Blue Wins: " + scoreY + "<h3>");
+        $("#blueWins-box").html("<h3>Y Wins: " + scoreY + "<h3>");
     }                     
 
     reset();             
